@@ -1,44 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>slaad</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slaad</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+    
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+    }
 
-        #video-background {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1;
-        }
-        .logo img {
-            width: 50px; /* Adjust the size as needed */
-        }
-    </style>
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 300px;
+      border: 2px solid black;
+      box-sizing: border-box;
+    }
+
+    .inner-square {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border: 2px solid black;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 <body>
-    <video id="video-background" autoplay loop>
-        <source src="https://cdn.discordapp.com/attachments/1212862895805698130/1229492932172578956/aaaa.mp4?ex=662fe185&is=661d6c85&hm=339550200595993b23010265e9f27cf3de0474d7888c764c971449fc7d7bb711" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+  <video autoplay muted loop>
+    <source src="https://cdn.discordapp.com/attachments/1212862895805698130/1229492932172578956/aaaa.mp4?ex=662fe185&is=661d6c85&hm=339550200595993b23010265e9f27cf3de0474d7888c764c971449fc7d7bb711" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-    <!-- Clickable logos -->
-    <!DOCTYPE html>
-<html>
-<head>
-    <title>youtube</title>
-</head>
-<body>
-
-<button onclick="window.location.href='https://www.youtube.com/@DupingmoNkey'">Go to www.youtube.com/@DupingmoNkey</button>
-
+  <div class="overlay">
+    <div class="inner-square"></div>
+  </div>
 </body>
 </html>
